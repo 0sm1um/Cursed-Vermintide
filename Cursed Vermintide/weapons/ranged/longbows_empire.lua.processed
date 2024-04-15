@@ -1,0 +1,44 @@
+local mod = get_mod("Vermintide Balance Manager")
+
+Weapons.longbow_empire_template.actions.action_two.default.default_zoom = "zoom_in_trueflight"
+Weapons.longbow_empire_template.actions.action_two.default.buffed_zoom_thresholds = { "zoom_in_trueflight", "zoom_in" }
+
+local allowed_chain_actions = {
+    {
+        action = "action_wield",
+        input = "action_wield",
+        start_time = 0,
+        sub_action = "default",
+        end_time = math.huge,
+    },
+    {
+        action = "action_one",
+        end_time = 1,
+        input = "action_one",
+        start_time = 0.5,
+        sub_action = "shoot_charged",
+    },
+    {
+        action = "action_one",
+        input = "action_one",
+        start_time = 1.25,
+        sub_action = "shoot_charged_heavy",
+        end_time = math.huge,
+    },
+    {
+        action = "weapon_reload",
+        input = "weapon_reload",
+        start_time = 0.5,
+        sub_action = "default",
+    },
+    {
+        action = "action_three",
+        input = "action_three",
+        start_time = 0,
+        sub_action = "default",
+    }
+}
+
+Weapons.longbow_empire_template.actions.action_two.default.aim_zoom_delay = 0
+aim_zoom_delay = 2,
+Weapons.longbow_empire_template.actions.action_two.default.allowed_chain_actions = allowed_chain_actions

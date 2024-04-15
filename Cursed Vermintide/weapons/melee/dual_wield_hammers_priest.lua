@@ -1,0 +1,7 @@
+local mod = get_mod("Vermintide Balance Manager")
+
+Weapons.dual_wield_hammers_priest_template.actions.action_one.heavy_attack_2.damage_profile_left = "dual_hammers_heavy_cleave_os"
+Weapons.dual_wield_hammers_priest_template.actions.action_one.heavy_attack_2.damage_profile_right = "dual_hammers_heavy_cleave_os"
+
+Weapons.dual_wield_hammers_priest_template.actions.action_one.heavy_attack_3.damage_profile_left = "dual_hammers_heavy_cleave_os"
+Weapons.dual_wield_hammers_priest_template.actions.action_one.heavy_attack_3.damage_profile_right = "dual_hammers_heavy_cleave_os"
